@@ -64,3 +64,11 @@ When your output grid is ready, click the green "Submit!" button to check your a
 After you've obtained the correct answer for the current test input grid, you can switch to the next test input grid for the task using the "Next test input" button (if there is any available; most tasks only have one test input).
 
 When you're done with a task, use the "load task" button to open a new task.
+
+
+###task solve_963e52fc
+The logic behind this task is that is the output is double the input. So the each color box and array is doubled to get the output, sounds straghit when you get it going but it is actually not. 
+
+
+###task solve_2204b7a8
+This task reads the colors in the input and the output splits into two so first half changes to the color of the intial color column and the second half changes to the last column color. Run program to review output for more understanding. 
