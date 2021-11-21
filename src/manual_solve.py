@@ -13,8 +13,19 @@ import re
 def solve_963e52fc(x):
     x = np.tile(x,2)   
     return x
-
-
+   
+def solve_2204b7a8(x):
+    for i in range(len(x)):
+        for j in range(len(x[i])):
+            a = x[i][:len(x[i])//2]
+            b = x[i][len(x[i])//2:]
+        for i, element in enumerate(a):
+            if element.any() > 0:
+                a[i] = a[0]
+        for i, element in enumerate(b):
+            if element.any() > 0:
+                b[i] = b[-1] 
+    return x
 def main():
     # Find all the functions defined in this file whose names are
     # like solve_abcd1234(), and run them.
