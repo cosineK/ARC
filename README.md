@@ -67,7 +67,8 @@ When you're done with a task, use the "load task" button to open a new task.
 
 ### Task solved description
 Task 1 --  solve_963e52fc
-The logic behind this task is that is the output is double the input. So the each color box and array is doubled to get the output, sounds straghit when you get it going but it is actually not. 
+The logic behind this task is that the output is double the input. So the each color box and grid is doubled to get the output, output reads input and produces grid n mutiplied by 2 and whatever colour in the ARC is doubled and fit same position
+to match the input configuration. 
 
 
 Task 2 -- solve_2204b7a8
