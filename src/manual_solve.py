@@ -45,7 +45,11 @@ def my_func_doc_str():
                         [0,2,0,0,0] 
              NOT SOLVED CORRECTLY.
              
-    >>> In regards to the commanlities; We only solving for x in all task,
+    >>> Summary:
+        The numpy library is an effective tool and definetly helped the structure of my coding, as most of the function I needed 
+        that would have taken me few lines of code to excute, I can do in one line of code with the help of 
+        numpy library.
+        In regards to the commanlities; We only solving for x in all task,
         i.e the functions return only x, as y the output isn't available in run mode.
              
     '''
