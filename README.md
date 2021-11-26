@@ -58,7 +58,7 @@ You have access to the following tools:
 - Floodfill: click on a cell from the output grid to color all connected cells to the selected color. "Connected cells" are contiguous cells with the same color.
 
 ### Solved task
-The code has been modified to include functions that solve or try to solve specific tasks form the ARC tasks. 
+The code has been modified to include functions that solve or try to solve specific tasks from the ARC tasks. 
 This function are named with reference to the task they will solve or try to solve. e.g solve_123456 will solve the ARC task 123456.
 The code has the output in strings of integer numbers, as mentioned above to visualisze the task solved from the code, you can run the specific task in the ARC .html GUI.  
 
