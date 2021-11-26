@@ -21,7 +21,7 @@ def my_func_doc_str():
     >>> Tasks Descriptions:
              solve_963e52fc -- this task requires to be give an input matrix
              with n number of grid and n amount of colors in the grid.
-             it produce double grids and double the color regardsless of color.
+             it produce double the grids and double the color regardsless of color.
              SOLVED CORRECTLY.
              
              solve_2204b7a8 -- This task requires to be given n amount of grids
@@ -30,29 +30,53 @@ def my_func_doc_str():
              into two so first half changes to the color of the intial color column 
              and the second half changes to the last column color.
              SOLVED CORRECTLY.
+             
+             solve_f15e1fac -- this task takes the input, made up of a base color box
+             and another color box.
+             The other color box will replace the black boxes in the grid in it's column or row 
+             up as far as before the position of the base color box in the base color's box column or row
+             e.g input = base color = 3
+                         color box = 8
+             input ARC, [0,0,0,0,0]
+                        [0,0,0,0,8]
+                        [0,2,0,0,0] 
+             output ARC [8,8,0,0,0]
+                        [0,0,8,8,8]
+                        [0,2,0,0,0] 
+             NOT SOLVED CORRECTLY.
+             
+    >>> In regards to the commanlities; We only solving for x in all task,
+        i.e the functions return only x, as y the output isn't available in run mode.
+             
     '''
     return
-
-#def solve_963e52fc(x):
-    #x = np.tile(x,2)   
-    #return x
-   
-#def solve_2204b7a8(x):
-    #for i in range(len(x)):
-        #for j in range(len(x[i])):
-            #a = x[i][:len(x[i])//2]
-            #b = x[i][len(x[i])//2:]
-        #for i, element in enumerate(a):
-            #if element.any() > 0:
-                #a[i] = a[0]
-        #for i, element in enumerate(b):
-            #if element.any() > 0:
-                #b[i] = b[-1] 
-    #return x
-
 def solve_f15e1fac(x):
-       
+    base_color = np.where(x==2)  #locate position of base color in the array and store
+    increment_color = np.where(x==8) #locate position of the other color in the array and store
+    increment_color = increment_color[0]+1 #go to next list in the array. i.e 
+    
+    for i in range(len(x)): #go through the entire grid
+        x[increment_color]=8  #replace the black grids in the other color column
     return x
+
+def solve_963e52fc(x):
+    x = np.tile(x,2)  #repeat the color and grid size, twice 
+    return x
+   
+def solve_2204b7a8(x):
+    for i in range(len(x)):   #for the entire grid
+        for j in range(len(x[i])):  #for the entire grid
+            a = x[i][:len(x[i])//2]  #split first half of grid and store in a
+            b = x[i][len(x[i])//2:]  ##split second half of grid and store in b
+        for i, element in enumerate(a): #iterate through grid in the first half
+            if element.any() > 0:  #if color exist
+                a[i] = a[0]        #replace the the existing color box with new color box.
+        for i, element in enumerate(b): #iterate through the second half
+            if element.any() > 0:   ##if color exist
+                b[i] = b[-1]        #replace the the existing color box with new color box.
+    return x
+
+
 
 
 def main():
