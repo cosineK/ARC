@@ -57,19 +57,8 @@ You have access to the following tools:
     - After selecting cells on either the input grid or the output grid, you can press C to copy their content. After copying, you can select a cell on the output grid and press "V" to paste the copied content. You should select the cell in the top left corner of the zone you want to paste into.
 - Floodfill: click on a cell from the output grid to color all connected cells to the selected color. "Connected cells" are contiguous cells with the same color.
 
-### Answer validation
+### Solved task
+The code has been modified to include function that solve or try to solve specific tasks form ARC tasks. 
+This function are named with reference to the task they will ksolve or try to solve. e.g solve_123456 will solve the ARC task 123456.
+The code has the output in stings of integer numbers, as mentioned above to visualisze the task solve from the code you can run the specific in the ARC .html GUI.  
 
-When your output grid is ready, click the green "Submit!" button to check your answer. We do not enforce the 3-trials rule.
-
-After you've obtained the correct answer for the current test input grid, you can switch to the next test input grid for the task using the "Next test input" button (if there is any available; most tasks only have one test input).
-
-When you're done with a task, use the "load task" button to open a new task.
-
-### Task solved description
-Task 1 --  solve_963e52fc
-The logic behind this task is that the output is double the input. So the each color box and grid is doubled to get the output, output reads input and produces grid n mutiplied by 2 and whatever colour in the ARC is doubled and fit same position
-to match the input configuration. 
-
-
-Task 2 -- solve_2204b7a8
-This task reads the colors in the input and the output splits into two so first half changes to the color of the intial color column and the second half changes to the last column color. Run program to review output for more understanding. 
